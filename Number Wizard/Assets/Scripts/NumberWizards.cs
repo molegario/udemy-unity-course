@@ -12,14 +12,19 @@ public class NumberWizards : MonoBehaviour {
 		DisplayNewGame();
 	}
 	
+	void DisplayInstructions() {
+		print ("Press UP arrow for higher, DOWN arrow for lower, and RETURN for equals.");
+	}
+	
 	void DisplayNewGame () {
+		print ("==============================================");
 		print ("Pick a number in your head, but don't tell me.");
 		print ("The Highest number you can pick is " + max + ".");
 		print ("The lowest number you can pick is " + min + ".");
 		max = max + 1;
 		guess = max/2;
 		print ("Is the number higher or lower than or equal to " + guess + "?");
-		print ("Press UP arrow for higher, DOWN arrow for lower, and RETURN for equals.");
+		DisplayInstructions();
 	}
 	
 	// Update is called once per frame
@@ -40,6 +45,7 @@ public class NumberWizards : MonoBehaviour {
 				}	
 				guess = (max + min)/2;
 				print ("Is the number higher or lower than or equal to " + guess);
+				DisplayInstructions();
 			}
 		} else {
 			min = 1;
