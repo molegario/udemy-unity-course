@@ -39,7 +39,6 @@ public class NumberWizards : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.UpArrow)) {
 				print ("HIGHER");
 				min = guess;
-				
 			} else if (Input.GetKeyDown(KeyCode.DownArrow)) {
 				print ("LOWER");
 				max = guess;				
